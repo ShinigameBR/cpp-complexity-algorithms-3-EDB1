@@ -1,7 +1,7 @@
 #include "headers/pilha.h"
 
 // Função para verificar se a pilha está vazia
-bool Pilha::isEmpty()
+bool Pilha::empty()
 {
     return elementos.empty();
 }
@@ -15,7 +15,7 @@ void Pilha::push(int valor)
 // Função para desempilhar um elemento
 int Pilha::pop()
 {
-    if (isEmpty())
+    if (empty())
     {
         cout << "Erro: Pilha vazia." << endl;
         return -1;
@@ -31,7 +31,7 @@ int Pilha::pop()
 // Função para obter o elemento do topo da pilha
 int Pilha::top()
 {
-    if (isEmpty())
+    if (empty())
     {
         cout << "Erro: Pilha vazia." << endl;
         return -1;

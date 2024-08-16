@@ -1,21 +1,33 @@
 #include "p1/headers/p1.h"
+#include "p2/headers/p2.h"
 
 int main()
 {
-    string expressao;
-
-    cout << "Digite uma expressão: ";
-    getline(cin, expressao); // Lê a expressão completa
-
-    // Verifica o balanceamento da expressão e exibe o resultado
-    if (checkBalancing(expressao))
+    string opcao;
+    while (true)
     {
-        cout << "A expressão está balanceada." << endl;
+        cout << "Digite uma opção (p1, p2, SAIR): " << endl;
+        getline(cin, opcao);
+        if (opcao == "p1")
+        {
+            clear();
+            p1();
+        }
+        else if (opcao == "p2")
+        {
+            clear();
+            p2();
+            clear();
+        }
+        else if (opcao == "SAIR")
+        {
+            clear();
+            break;
+        }
+        else
+        {
+            cout << "Opção inválida!" << endl;
+        }
     }
-    else
-    {
-        cout << "A expressão não está balanceada." << endl;
-    }
-
     return 0;
 }

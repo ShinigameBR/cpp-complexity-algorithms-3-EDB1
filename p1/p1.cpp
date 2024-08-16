@@ -24,7 +24,7 @@ bool checkBalancing(const string &expressao)
         else if (ch == ')' || ch == ']' || ch == '}')
         {
             // Se a pilha estiver vazia ou o topo não corresponder ao delimitador de fechamento
-            if (pilha.isEmpty() || !isEqual(pilha.pop(), ch))
+            if (pilha.empty() || !isEqual(pilha.pop(), ch))
             {
                 return false; // Delimitadores não estão balanceados
             }
@@ -32,5 +32,23 @@ bool checkBalancing(const string &expressao)
     }
 
     // Se a pilha estiver vazia ao final, a expressão está balanceada
-    return pilha.isEmpty();
+    return pilha.empty();
+}
+
+// Função principal
+void p1()
+{
+    string expressao;
+    cout << "Digite uma expressão: " << endl;
+    getline(cin, expressao);
+
+    // Verifica o balanceamento da expressão e exibe o resultado
+    if (checkBalancing(expressao))
+    {
+        cout << "A expressão está balanceada." << endl;
+    }
+    else
+    {
+        cout << "A expressão não está balanceada." << endl;
+    }
 }

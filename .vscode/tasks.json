@@ -10,6 +10,8 @@
         "${file}",
         "${fileDirname}/p1/pilha.cpp",
         "${fileDirname}/p1/p1.cpp",
+        "${fileDirname}/p2/fila.cpp",
+        "${fileDirname}/p2/p2.cpp",
         "-o",
         "${fileDirname}/${fileBasenameNoExtension}"
       ],

@@ -10,4 +10,7 @@ bool isEqual(char abertura, char fechamento);
 // Função para verificar se uma expressão contém delimitadores balanceados
 bool checkBalancing(const std::string &expressao);
 
+// Função principal
+void p1();
+
 #endif

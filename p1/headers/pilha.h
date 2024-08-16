@@ -4,7 +4,6 @@
 #include <iostream>
 #include <list>
 using namespace std;
-
 class Pilha
 {
 private:
@@ -12,7 +11,7 @@ private:
 
 public:
     // Função para verificar se a pilha está vazia
-    bool isEmpty();
+    bool empty();
 
     // Função para empilhar um elemento
     void push(int valor);
